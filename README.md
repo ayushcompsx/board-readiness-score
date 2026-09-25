@@ -4,6 +4,8 @@
 
 **A free tool that tells startup founders exactly which senior advisor they need — built as a lead magnet for Connectd.**
 
+### 🔗 [Try it live](https://board-readiness-score-jawu4xfblxrfmrbmglxi87.streamlit.app/)
+
 </div>
 
 ---

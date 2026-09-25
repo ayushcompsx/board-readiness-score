@@ -1,0 +1,32 @@
+{
+  "default": {
+    "funding_stage": "Pre-seed",
+    "team_size": 4,
+    "founded_year": 2025,
+    "sector": "B2B SaaS",
+    "has_board": false,
+    "has_advisors": false,
+    "last_funding_round_usd": 0,
+    "notes": "Early-stage team, founder-led, no formal governance structure in place."
+  },
+  "seed_example": {
+    "funding_stage": "Seed",
+    "team_size": 12,
+    "founded_year": 2024,
+    "sector": "Fintech",
+    "has_board": true,
+    "has_advisors": false,
+    "last_funding_round_usd": 1500000,
+    "notes": "Raised a seed round, has one investor board seat, no independent advisors."
+  },
+  "series_a_example": {
+    "funding_stage": "Series A",
+    "team_size": 35,
+    "founded_year": 2023,
+    "sector": "Healthtech",
+    "has_board": true,
+    "has_advisors": true,
+    "last_funding_round_usd": 8000000,
+    "notes": "Formal board in place, two advisors, gap identified in financial governance (no fractional CFO input)."
+  }
+}

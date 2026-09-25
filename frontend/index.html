@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Board Readiness Score — Connectd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<main class="page">
+
+  <!-- ================= INTRO ================= -->
+  <section class="intro">
+    <p class="eyebrow-plain">Connectd</p>
+    <h1>Board Readiness Score</h1>
+    <p class="lede">
+      A short, free assessment of your startup's board and advisory
+      readiness — where you're strong, where a senior advisor could
+      genuinely help, and what to do about it.
+    </p>
+  </section>
+
+  <!-- ================= FORM ================= -->
+  <section class="panel" id="form-panel">
+    <form id="assessment-form">
+
+      <label>
+        Company name
+        <input type="text" name="company_name" required placeholder="Acme Robotics" />
+      </label>
+
+      <label>
+        Website <span class="optional">(optional)</span>
+        <input type="text" name="website" placeholder="acme.com" />
+      </label>
+
+      <div class="field-row">
+        <label>
+          Stage
+          <select name="stage" required>
+            <option value="">Select…</option>
+            <option>Pre-seed</option>
+            <option>Seed</option>
+            <option>Series A</option>
+          </select>
+        </label>
+
+        <label>
+          Industry
+          <input type="text" name="industry" required placeholder="Fintech" />
+        </label>
+      </div>
+
+      <label>
+        Team size
+        <input type="number" name="team_size" required min="1" placeholder="12" />
+      </label>
+
+      <label>
+        Existing board or advisors <span class="optional">(optional)</span>
+        <textarea name="existing_board_or_advisors" rows="2" placeholder="e.g. one investor board seat, no independent advisors"></textarea>
+      </label>
+
+      <label>
+        Current strategic challenges <span class="optional">(optional)</span>
+        <textarea name="current_strategic_challenges" rows="2" placeholder="e.g. preparing for a Series A raise"></textarea>
+      </label>
+
+      <label>
+        Where do you feel you need senior expertise? <span class="optional">(optional)</span>
+        <textarea name="areas_seeking_expertise" rows="2" placeholder="e.g. financial governance, go-to-market strategy"></textarea>
+      </label>
+
+      <button type="submit">Get your Board Readiness Score</button>
+      <p class="form-footnote">Takes about 30 seconds. No account needed.</p>
+    </form>
+  </section>
+
+  <!-- ================= PROCESSING ================= -->
+  <section class="panel hidden" id="processing-panel">
+    <p class="processing-message" id="processing-message">Understanding your company…</p>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  </section>
+
+  <!-- ================= ERROR ================= -->
+  <section class="panel hidden" id="error-panel">
+    <h2>Something went wrong</h2>
+    <p id="error-message"></p>
+    <button type="button" id="error-retry">Try again</button>
+  </section>
+
+  <!-- ================= REPORT ================= -->
+  <section class="panel hidden" id="report-panel">
+
+    <div class="score-block">
+      <p class="score-number" id="report-score">—</p>
+      <p class="score-label">Board Readiness Score</p>
+    </div>
+
+    <p class="executive-summary" id="report-summary"></p>
+
+    <div class="report-section">
+      <h3>Full scorecard</h3>
+      <p class="subhead">All 8 dimensions, with the AI's evidence for each rating</p>
+      <div id="report-dimensions"></div>
+    </div>
+
+    <div class="report-section">
+      <h3>Where you're strong</h3>
+      <ul id="report-strengths"></ul>
+    </div>
+
+    <div class="report-section">
+      <h3>Where you may need senior expertise</h3>
+      <div id="report-gaps"></div>
+    </div>
+
+    <div class="report-section">
+      <h3>Governance readiness</h3>
+      <p class="subhead">Current signals</p>
+      <ul id="report-governance-signals"></ul>
+      <p class="subhead">Potential improvements</p>
+      <ul id="report-governance-improvements"></ul>
+    </div>
+
+    <div class="report-section">
+      <h3>Recommended next steps</h3>
+      <ol id="report-next-steps"></ol>
+    </div>
+
+    <div class="cta-block">
+      <p id="report-cta"></p>
+      <a href="https://connectd.co" class="cta-button">Get matched with Connectd advisors</a>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
